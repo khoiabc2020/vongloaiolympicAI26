@@ -1,0 +1,29 @@
+# Data directories & archives
+**/data/
+data/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# Model checkpoints & weights
+*.pth
+*.pt
+*.onnx
+*.bin
+*.pkl
+*.h5
+*.safetensors
+
+# Execution artifacts & cache
+**/runs/
+runs/
+__pycache__/
+**/*.pyc
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
