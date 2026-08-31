@@ -1,0 +1,239 @@
+<mxfile host="app.diagrams.net" version="24.7.5">
+  <diagram name="System_Architecture" id="DocViVQA_System">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ================= SOLVERS CONTAINER (PALE PINK WITH RED DASHED BORDER) ================= -->
+        <mxCell id="solvers_container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8e8;strokeColor=#ea6b66;dashed=1;dashPattern=4 4;strokeWidth=1.5;opacity=45;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="345" width="980" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- ================= TOP ROW (y = 40) ================= -->
+
+        <!-- 1. Document Images (Top Left - Light Green) -->
+        <mxCell id="node_doc_img" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:38px;text-align:center;vertical-align:middle;padding-left:6px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCAzMiI+CiAgPHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjM2IiBoZWlnaHQ9IjI4IiByeD0iMiIgZmlsbD0iI0M4RTZDOSIgc3Ryb2tlPSIjMkU3RDMyIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogIDxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjMiIGZpbGw9IiMyRTdEMzIiLz4KICA8cG9seWdvbiBwb2ludHM9IjUsMjYgMTQsMTQgMjMsMjMgMjcsMTggMzUsMjYiIGZpbGw9IiMyRTdEMzIiLz4KPC9zdmc+&quot; width=&quot;28&quot; height=&quot;22&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:8px;&quot;&gt;&lt;span style=&quot;font-size:13.5px;color:#000000;&quot;&gt;Document Images&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#548235;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="60" y="40" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 2. Bounding Box (Top Middle - Light Blue) -->
+        <mxCell id="node_bbox" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:36px;text-align:center;vertical-align:middle;padding-left:4px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjI4IiByeD0iMyIgZmlsbD0iI0UxRjVGRSIgc3Ryb2tlPSIjMDI4OEQxIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWRhc2hhcnJheT0iMyAyIi8+CiAgPHRleHQgeD0iMTgiIHk9IjE5IiBmb250LWZhbWlseT0iR2VvcmdpYSwgQ2FtYnJpYSwgc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMDE1NzlCIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5PQ1I8L3RleHQ+Cjwvc3ZnPg==&quot; width=&quot;26&quot; height=&quot;24&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:6px;&quot;&gt;&lt;span style=&quot;font-size:13px;color:#000000;&quot;&gt;Bounding box&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#41719c;&quot;&gt;(text + geometry)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#41719c;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="175" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 3. Question (Top Right - Light Yellow) -->
+        <mxCell id="node_question" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:34px;text-align:center;vertical-align:middle;padding-left:6px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTMiIGZpbGw9IiNGRkY1OUQiIHN0cm9rZT0iI0Y1N0YxNyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHRleHQgeD0iMTYiIHk9IjIzIiBmb250LWZhbWlseT0iR2VvcmdpYSwgQ2FtYnJpYSwgc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjNUQ0MDM3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4/PC90ZXh0Pgo8L3N2Zz4=&quot; width=&quot;24&quot; height=&quot;24&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:8px;&quot;&gt;&lt;span style=&quot;font-size:13.5px;color:#000000;&quot;&gt;Question&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="660" y="40" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ================= LEVEL 2 (y = 135) ================= -->
+
+        <!-- 4. Table Reconstruction (Light Blue) -->
+        <mxCell id="node_table_recon" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:36px;text-align:center;vertical-align:middle;padding-left:6px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjI4IiByeD0iMiIgZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjMDI4OEQxIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogIDxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSIzMiIgaGVpZ2h0PSI4IiByeD0iMSIgZmlsbD0iIzAyODhEMSIvPgogIDxsaW5lIHgxPSIyIiB5MT0iMTgiIHgyPSIzNCIgeTI9IjE4IiBzdHJva2U9IiMwMjg4RDEiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjEyIiB5MT0iMiIgeDI9IjEyIiB5Mj0iMzAiIHN0cm9rZT0iIzAyODhEMSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iMjMiIHkxPSIyIiB4Mj0iMjMiIHkyPSIzMCIgc3Ryb2tlPSIjMDI4OEQxIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4=&quot; width=&quot;26&quot; height=&quot;24&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:8px;&quot;&gt;&lt;span style=&quot;font-size:13.5px;color:#000000;&quot;&gt;Table Reconstruction&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#41719c;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="325" y="135" width="205" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 5. Intent and Constraint Extraction (Light Yellow) -->
+        <mxCell id="node_intent" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:36px;text-align:center;vertical-align:middle;padding-left:6px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPHJlY3QgeD0iMiIgeT0iMyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjciIHJ4PSIyIiBmaWxsPSIjRUY5QTlBIiBzdHJva2U9IiNDNjI4MjgiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgPGNpcmNsZSBjeD0iNyIgY3k9IjYuNSIgcj0iMiIgZmlsbD0iI0ZGRkZGRiIvPgogIDxyZWN0IHg9IjIiIHk9IjEyLjUiIHdpZHRoPSIzMiIgaGVpZ2h0PSI3IiByeD0iMiIgZmlsbD0iI0ZGQ0M4MCIgc3Ryb2tlPSIjRUY2QzAwIiBzdHJva2Utd2lkdGg9IjEuMiIvPgogIDxjaXJjbGUgY3g9IjE1IiBjeT0iMTYiIHI9IjIiIGZpbGw9IiNGRkZGRkYiLz4KICA8cmVjdCB4PSIyIiB5PSIyMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjciIHJ4PSIyIiBmaWxsPSIjRkZGNTlEIiBzdHJva2U9IiNGOUE4MjUiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNS41IiByPSIyIiBmaWxsPSIjRkZGRkZGIi8+Cjwvc3ZnPg==&quot; width=&quot;26&quot; height=&quot;24&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:6px;&quot;&gt;&lt;span style=&quot;font-size:12.5px;color:#000000;&quot;&gt;Intent and Constraint Extraction&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="605" y="135" width="260" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ================= LEVEL 3 (y = 230) ================= -->
+
+        <!-- 6. Candidate Rows and Cells (Light Blue) -->
+        <mxCell id="node_candidates" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:36px;text-align:center;vertical-align:middle;padding-left:6px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjI4IiByeD0iMiIgZmlsbD0iI0IzRTVGQyIgc3Ryb2tlPSIjMDI4OEQxIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogIDxyZWN0IHg9IjUiIHk9IjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjYiIGZpbGw9IiMwMjg4RDEiLz4KICA8cmVjdCB4PSIxNSIgeT0iNSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjYiIGZpbGw9IiMwMjg4RDEiLz4KICA8cmVjdCB4PSI1IiB5PSIxNCIgd2lkdGg9IjciIGhlaWdodD0iMTIiIGZpbGw9IiMwMjg4RDEiLz4KICA8bGluZSB4MT0iMTUiIHkxPSIxNyIgeDI9IjMxIiB5Mj0iMTciIHN0cm9rZT0iIzAyODhEMSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGxpbmUgeDE9IjE1IiB5MT0iMjMiIHgyPSIzMSIgeTI9IjIzIiBzdHJva2U9IiMwMjg4RDEiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=&quot; width=&quot;26&quot; height=&quot;24&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:8px;&quot;&gt;&lt;span style=&quot;font-size:13px;color:#000000;&quot;&gt;Candidate Rows and Cells&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#41719c;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="315" y="230" width="225" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 7. Reasoning Router (Light Coral / Peach) -->
+        <mxCell id="node_router" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:36px;text-align:center;vertical-align:middle;padding-left:6px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPGNpcmNsZSBjeD0iNSIgY3k9IjE2IiByPSIzLjUiIGZpbGw9IiNEMzJGMkYiLz4KICA8cGF0aCBkPSJNNSAxNiBMMjAgNiIgc3Ryb2tlPSIjRDMyRjJGIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTUgMTYgTDI0IDE2IiBzdHJva2U9IiNEMzJGMkYiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNNSAxNiBMMjAgMjYiIHN0cm9rZT0iI0QzMkYyRiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTksMiAyNiw2IDE5LDEwIiBmaWxsPSIjMkU3RDMyIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIyMywxMiAzMCwxNiAyMywyMCIgZmlsbD0iI0QzMkYyRiIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTksMjIgMjYsMjYgMTksMzAiIGZpbGw9IiNFNjUxMDAiLz4KPC9zdmc+&quot; width=&quot;26&quot; height=&quot;24&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:6px;&quot;&gt;&lt;span style=&quot;font-size:13px;color:#000000;&quot;&gt;Reasoning Router&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4d6;strokeColor=#c00000;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="645" y="230" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ================= 5 SOLVERS (y = 360) ================= -->
+
+        <!-- 1. Bold Row Resolver (Light Purple / Pink) -->
+        <mxCell id="solver_bold" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:30px;text-align:center;vertical-align:middle;padding-left:4px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIxNCIgcj0iMTEiIGZpbGw9IiNGQ0U0RUMiIHN0cm9rZT0iI0MyMTg1QiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIxNCIgcj0iNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQUQxNDU3IiBzdHJva2Utd2lkdGg9IjEuMiIvPgogIDxsaW5lIHgxPSIyMiIgeTE9IjIyIiB4Mj0iMzIiIHkyPSIzMCIgc3Ryb2tlPSIjQzIxODVCIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==&quot; width=&quot;24&quot; height=&quot;22&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:4px;&quot;&gt;&lt;span style=&quot;font-size:12px;color:#000000;&quot;&gt;Bold Row Resolver&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="60" y="360" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 2. Lookup Solver (Light Rose) -->
+        <mxCell id="solver_lookup" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:30px;text-align:center;vertical-align:middle;padding-left:4px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIxNCIgcj0iMTEiIGZpbGw9IiNGRkVCRUUiIHN0cm9rZT0iI0QzMkYyRiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGxpbmUgeDE9IjIyIiB5MT0iMjIiIHgyPSIzMiIgeTI9IjMwIiBzdHJva2U9IiNEMzJGMkYiIHN0cm9rZS13aWR0aD0iMy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+&quot; width=&quot;24&quot; height=&quot;22&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:4px;&quot;&gt;&lt;span style=&quot;font-size:12.5px;color:#000000;&quot;&gt;Lookup Solver&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="250" y="360" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 3. Aggregation Solver (Light Rose) -->
+        <mxCell id="solver_agg" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:30px;text-align:center;vertical-align:middle;padding-left:4px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPHJlY3QgeD0iMyIgeT0iMiIgd2lkdGg9IjMwIiBoZWlnaHQ9IjI4IiByeD0iNSIgZmlsbD0iI0ZGQ0REMiIgc3Ryb2tlPSIjQzYyODI4IiBzdHJva2Utd2lkdGg9IjEuOCIvPgogIDxsaW5lIHgxPSIxOCIgeTE9IjgiIHgyPSIxOCIgeTI9IjI0IiBzdHJva2U9IiNDNjI4MjgiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjEwIiB5MT0iMTYiIHgyPSIyNiIgeTI9IjE2IiBzdHJva2U9IiNDNjI4MjgiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==&quot; width=&quot;24&quot; height=&quot;22&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:4px;&quot;&gt;&lt;span style=&quot;font-size:12px;color:#000000;&quot;&gt;Aggregation Solver&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="430" y="360" width="165" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 4. Ranking Solver (Light Rose) -->
+        <mxCell id="solver_rank" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:30px;text-align:center;vertical-align:middle;padding-left:4px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPHJlY3QgeD0iNCIgeT0iMTciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiBmaWxsPSIjRDMyRjJGIi8+CiAgPHJlY3QgeD0iMTMiIHk9IjExIiB3aWR0aD0iNiIgaGVpZ2h0PSIxNyIgZmlsbD0iI0QzMkYyRiIvPgogIDxyZWN0IHg9IjIyIiB5PSI1IiB3aWR0aD0iNiIgaGVpZ2h0PSIyMyIgZmlsbD0iI0QzMkYyRiIvPgogIDxwb2x5bGluZSBwb2ludHM9IjcsMTQgMTYsNyAyNiwyIiBmaWxsPSJub25lIiBzdHJva2U9IiMyRTdEMzIiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSIyNiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMyRTdEMzIiLz4KPC9zdmc+&quot; width=&quot;24&quot; height=&quot;22&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:4px;&quot;&gt;&lt;span style=&quot;font-size:12.5px;color:#000000;&quot;&gt;Ranking Solver&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="625" y="360" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 5. Comparison Solver (Light Rose) -->
+        <mxCell id="solver_comp" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:30px;text-align:center;vertical-align:middle;padding-left:4px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPGxpbmUgeDE9IjQiIHkxPSIxMCIgeDI9IjMyIiB5Mj0iMTAiIHN0cm9rZT0iIzVENDAzNyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICA8bGluZSB4MT0iMTgiIHkxPSI1IiB4Mj0iMTgiIHkyPSIyNyIgc3Ryb2tlPSIjNUQ0MDM3IiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTIsMjcgMjQsMjcgMTgsMjMiIGZpbGw9IiM1RDQwMzciLz4KICA8cGF0aCBkPSJNNCAxMCBMOCAxOSBMMTMgMTkgWiIgZmlsbD0iI0ZGQ0REMiIgc3Ryb2tlPSIjQzYyODI4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxwYXRoIGQ9Ik0yMyAxMCBMMjggMTkgTDMyIDE5IFoiIGZpbGw9IiNGRkNERDIiIHN0cm9rZT0iI0M2MjgyOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPC9zdmc+&quot; width=&quot;24&quot; height=&quot;22&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:4px;&quot;&gt;&lt;span style=&quot;font-size:12px;color:#000000;&quot;&gt;Comparison Solver&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.5;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="805" y="360" width="165" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- ================= RESULT CONTAINER (y = 485) ================= -->
+
+        <mxCell id="result_box" value="&lt;b style=&quot;font-size:13.5px;color:#000000;font-family:Georgia,Cambria,serif;&quot;&gt;Result&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1.5;verticalAlign=top;spacingTop=6;arcSize=14;" vertex="1" parent="1">
+          <mxGeometry x="400" y="485" width="280" height="95" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-card 1: Answer -->
+        <mxCell id="res_answer" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:28px;text-align:center;vertical-align:middle;padding-left:4px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPHBhdGggZD0iTTQgNSBDNCAyLjggNi4yIDEgOSAxIEwyNyAxIEMyOS44IDEgMzIgMi44IDMyIDUgTDMyIDE4IEMzMiAyMC4yIDI5LjggMjIgMjcgMjIgTDE0IDIyIEw3IDI4IEw3IDIyIEw5IDIyIEM2LjIgMjIgNCAyMC4yIDQgMTggWiIgZmlsbD0iI0ZGRTA4MiIgc3Ryb2tlPSIjRkY4RjAwIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogIDxsaW5lIHgxPSI5IiB5MT0iOCIgeDI9IjI3IiB5Mj0iOCIgc3Ryb2tlPSIjRTY1MTAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSI5IiB5MT0iMTMiIHgyPSIyMiIgeTI9IjEzIiBzdHJva2U9IiNFNjUxMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==&quot; width=&quot;22&quot; height=&quot;20&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:4px;&quot;&gt;&lt;span style=&quot;font-size:12.5px;color:#000000;&quot;&gt;Answer&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=1.2;arcSize=14;" vertex="1" parent="1">
+          <mxGeometry x="415" y="520" width="115" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-card 2: Evidence -->
+        <mxCell id="res_evidence" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;height:100%;background:transparent;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:28px;text-align:center;vertical-align:middle;padding-left:4px;&quot;&gt;&lt;img src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzMiI+CiAgPGNpcmNsZSBjeD0iOCIgY3k9IjEwIiByPSI0LjUiIGZpbGw9IiNGRkE3MjYiIHN0cm9rZT0iI0U2NTEwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8Y2lyY2xlIGN4PSIyOCIgY3k9IjEwIiByPSI0LjUiIGZpbGw9IiNFRjUzNTAiIHN0cm9rZT0iI0M2MjgyOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8Y2lyY2xlIGN4PSIxOCIgY3k9IjI0IiByPSI0LjUiIGZpbGw9IiM0MkE1RjUiIHN0cm9rZT0iIzE1NjVDMCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iOCIgeTE9IjEwIiB4Mj0iMjgiIHkyPSIxMCIgc3Ryb2tlPSIjMzc0NzRGIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iOCIgeTE9IjEwIiB4Mj0iMTgiIHkyPSIyNCIgc3Ryb2tlPSIjMzc0NzRGIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iMjgiIHkxPSIxMCIgeDI9IjE4IiB5Mj0iMjQiIHN0cm9rZT0iIzM3NDc0RiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg==&quot; width=&quot;22&quot; height=&quot;20&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align:center;vertical-align:middle;padding-right:4px;&quot;&gt;&lt;span style=&quot;font-size:12.5px;color:#000000;&quot;&gt;Evidence&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=1.2;arcSize=14;" vertex="1" parent="1">
+          <mxGeometry x="550" y="520" width="115" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ================= CONNECTORS (ARROWS & BUSES) ================= -->
+
+        <!-- 1. Document Images -> OCR inference -> Bounding Box -->
+        <mxCell id="edge_doc_bbox" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;text-align:center;background:#ffffff;border:none;font-family:Georgia,Cambria,serif;&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b style=&quot;font-size:11px;color:#000000;&quot;&gt;OCR&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#000000;&quot;&gt;inference&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="node_doc_img" target="node_bbox">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 2. Document Images -> Bold Row Resolver (page pixels) -->
+        <mxCell id="edge_doc_bold" value="&lt;span style=&quot;font-family:Georgia,Cambria,serif;font-size:11px;color:#000000;&quot;&gt;page pixels&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="node_doc_img" target="solver_bold">
+          <mxGeometry x="-0.3" y="-12" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="200" />
+              <mxPoint x="140" y="200" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 3. Bounding Box -> Table Reconstruction -->
+        <mxCell id="edge_bbox_table" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;" edge="1" parent="1" source="node_bbox" target="node_table_recon">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 4. Table Reconstruction -> Candidate Rows and Cells -->
+        <mxCell id="edge_table_cand" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;" edge="1" parent="1" source="node_table_recon" target="node_candidates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 5. Question -> Intent and Constraint Extraction -->
+        <mxCell id="edge_q_intent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;" edge="1" parent="1" source="node_question" target="node_intent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 6. Intent -> Reasoning Router -->
+        <mxCell id="edge_intent_router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;" edge="1" parent="1" source="node_intent" target="node_router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 7. Candidate Rows + Reasoning Router Meeting at Central T-Junction -->
+        <mxCell id="line_cand_out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="node_candidates">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="592" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="line_router_out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="node_router">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="592" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Vertical Drop Stem from T-Junction to Distribution Bus -->
+        <mxCell id="stem_junction" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="592" y="255" as="sourcePoint" />
+            <mxPoint x="592" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Distribution Bus Bar across 4 Solvers (y = 310) -->
+        <mxCell id="bus_solvers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="310" as="sourcePoint" />
+            <mxPoint x="888" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 4 Solver Drop Arrows from Bus -->
+        <mxCell id="arrow_to_lookup" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;" edge="1" parent="1" target="solver_lookup">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="310" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arrow_to_agg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;" edge="1" parent="1" target="solver_agg">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="512" y="310" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arrow_to_rank" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;" edge="1" parent="1" target="solver_rank">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="310" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arrow_to_comp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;" edge="1" parent="1" target="solver_comp">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="888" y="310" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ================= SOLVERS OUTPUT BUS INTO RESULT ================= -->
+
+        <mxCell id="out_bold" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;exitX=0.5;exitY=1;" edge="1" parent="1" source="solver_bold">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="out_lookup" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;exitX=0.5;exitY=1;" edge="1" parent="1" source="solver_lookup">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="out_agg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;exitX=0.5;exitY=1;" edge="1" parent="1" source="solver_agg">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="512" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="out_rank" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;exitX=0.5;exitY=1;" edge="1" parent="1" source="solver_rank">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="out_comp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;exitX=0.5;exitY=1;" edge="1" parent="1" source="solver_comp">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="888" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Bottom Collector Bus Bar (y = 450) -->
+        <mxCell id="bus_bottom" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="450" as="sourcePoint" />
+            <mxPoint x="888" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Final Arrow into Result Box -->
+        <mxCell id="arrow_into_result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endSize=6;endFill=1;" edge="1" parent="1" target="result_box">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="450" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
