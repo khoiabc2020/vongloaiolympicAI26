@@ -24,7 +24,7 @@ Quá trình đánh giá được thực hiện tự động và độc lập tr�
 | **Complete Document Match** | 0,00% | 1,64% | **45,20%** | **+45,20%** |
 | **Table Count Accuracy** | 31,27% | 74,64% | **99,10%** | **+67,83%** |
 | **Grid Shape Accuracy** | 31,27% | 61,91% | **98,80%** | **+67,53%** |
-| **Merge Precision \| Shape** | 94,48% | 96,18% | **98,50%** | **+4,02%** |
+| **Merge Precision (trên Shape đúng)** | 94,48% | 96,18% | **98,50%** | **+4,02%** |
 | **Bold Classification (F1)** | **0,00%** | **53,01%** | **96,40%** | **+96,40%** |
 
 ---
@@ -46,7 +46,7 @@ Quá trình đánh giá được thực hiện tự động và độc lập tr�
 
 Thống kê phân loại trên 83.416 ô bảng biểu thuộc tập huấn luyện:
 
-* **Tài liệu có sự sai lệch về cấu trúc lưới:** 756 / 1.100 tài liệu (68,73%), tập trung chủ yếu ở nhóm M2, M3 và M4 do GridCRNN áp dụng lưới chia đều $M 	imes N$ cố định.
+* **Tài liệu có sự sai lệch về cấu trúc lưới:** 756 / 1.100 tài liệu (68,73%), tập trung chủ yếu ở nhóm M2, M3 và M4 do GridCRNN áp dụng lưới chia đều $M \times N$ cố định.
 * **Số ô có nội dung văn bản khác nhau:** 51.805 / 83.416 ô (62,10%).
   * **Chỉ Pipeline đề xuất nhận diện chính xác:** 39.425 ô (76,10% số ô sai lệch).
   * **Chỉ GridCRNN nhận diện chính xác:** 3.120 ô (6,02% số ô sai lệch, phần lớn là các ô chỉ chứa 1 chữ số đơn lẻ).
@@ -81,9 +81,9 @@ $$P(\mathbf{y}|\mathbf{x}) = \sum_{\pi \in \mathcal{B}^{-1}(\mathbf{y})} \prod_{
 
 Độ đo TEDS tính toán chi phí thay thế node `<td>` dựa trên khoảng cách Levenshtein chuẩn hóa:
 
-$$	ext{cost}(td_{	ext{pred}}, td_{	ext{true}}) = rac{	ext{Levenshtein}(	ext{text}_{	ext{pred}}, 	ext{text}_{	ext{true}})}{\max(|	ext{text}_{	ext{pred}}|, |	ext{text}_{	ext{true}}|)}$$
+$$\text{cost}(td_{\text{pred}}, td_{\text{true}}) = \frac{\text{Levenshtein}(\text{text}_{\text{pred}}, \text{text}_{\text{true}})}{\max(|\text{text}_{\text{pred}}|, |\text{text}_{\text{true}}|)}$$
 
-Khi mô hình nhận diện sai dấu thanh (ví dụ: `Tổng cộng` $ightarrow$ `Tong cong`), khoảng cách Levenshtein giữa hai chuỗi là 2, dẫn đến chi phí phạt trên node là $pprox 0,22$. Khi sai số này tích lũy trên hàng chục ô trong bảng, tổng chi phí chỉnh sửa cây APTED tăng cao, làm giảm từ 15% đến 20% điểm TEDS của tài liệu dù hình học khung lưới được phát hiện chính xác 100%.
+Khi mô hình nhận diện sai dấu thanh (ví dụ: `Tổng cộng` $\rightarrow$ `Tong cong`), khoảng cách Levenshtein giữa hai chuỗi là 2, dẫn đến chi phí phạt trên node là $\approx 0,22$. Khi sai số này tích lũy trên hàng chục ô trong bảng, tổng chi phí chỉnh sửa cây APTED tăng cao, làm giảm từ 15% đến 20% điểm TEDS của tài liệu dù hình học khung lưới được phát hiện chính xác 100%.
 
 ---
 
@@ -94,8 +94,8 @@ Khi mô hình nhận diện sai dấu thanh (ví dụ: `Tổng cộng` $ightarr
    * Khi tỷ lệ nét kẻ dưới ngưỡng $40\%$, giải thuật tự động thực hiện phép hợp nhất `union(u, v)`, gán nhãn ô gốc và thiết lập các marker `[[H]]`, `[[V]]` tương ứng, nâng TEDS tập M2 từ $20,40\%$ lên $95,49\%$.
 
 2. **Phân loại chữ in đậm bằng mô hình độ bền xói mòn (Erosion Survival Model):**
-   * Trích xuất trực tiếp mặt nạ nhị phân của nét chữ trên ảnh gốc và tính toán tỷ lệ diện tích bảo toàn sau phép xói mòn với phần tử cấu trúc $3 	imes 3$:
-     $$E(C) = rac{\sum (B \ominus K)}{\sum B + \epsilon}$$
+   * Trích xuất trực tiếp mặt nạ nhị phân của nét chữ trên ảnh gốc và tính toán tỷ lệ diện tích bảo toàn sau phép xói mòn với phần tử cấu trúc $3 \times 3$:
+     $$E(C) = \frac{\sum (B \ominus K)}{\sum B + \epsilon}$$
    * Áp dụng ngưỡng phân loại $E(C) \ge 0,42$ kết hợp quy tắc ngữ pháp cho hàng tiêu đề và hàng tổng, đạt F1-score $96,40\%$.
 
 3. **Mô hình hóa chuỗi tự hồi quy với VietOCR Transformer:**
